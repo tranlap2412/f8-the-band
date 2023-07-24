@@ -1,80 +1,103 @@
 /* Reset Css */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: Arial, Helvetica, sans-serif;
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#main{
-
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #000;
 }
 
-#header{
-height:50px;
-background-color: #000;
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav {
+  display: flex;
+  align-items: flex-start;
 }
 
 #nav li {
-    display: inline-block;
-    line-height: 50px;
+  list-style-type: none;
+  line-height: 50px;
 }
 
 #nav li:hover {
-   background-color: #ccc;
-   color:#000
+  background-color: #ccc;
+  color: #000;
 }
 
-#nav li a {
-    color: #fff;
-    text-decoration:none;
-    display: inline-block;
-    padding: 0 24px;
-    text-transform:uppercase;
+#nav li:hover .subnav {
+  display: block;
 }
 
-#nav li:last-child a::after{
-    content: "\25BC";
-    padding-left: 5px;
-    color: #fff;
+#nav > li > a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 24px;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
-.subnav{
-    display: none;
+#nav > li:last-child > a::after {
+  content: "\25BC";
+  padding-left: 5px;
+  color: #fff;
 }
 
-.header-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.subnav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 200px;
 }
 
-#search{
-    color: #fff;
-    height: 50px;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    font-size: 35px;
-    padding:0 30px;
+.subnav li {
+  line-height: 40px !important;
 }
 
-#search:hover{
-    background-color: #ccc;
-    color:#000;
+.subnav li a {
+  color: #000;
+  padding: 0 12px;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: block;
 }
 
-#banner{
-
+#search {
+  color: #fff;
+  height: 50px;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  padding: 0 25px;
 }
 
-#content{
-
+#search:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
 }
 
-#footer{
+#banner {
+}
 
+#content {
+}
+
+#footer {
 }
